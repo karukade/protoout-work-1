@@ -64,7 +64,7 @@ const serve = path => express.static(resolve(path), {
 
 app.use('/.netlify/functions/app/api', router)
 app.use(history())
-app.use('/.netlify/functions/app/data', serve('./data'))
+app.use('/.netlify/functions/app/data', express.static('data'))
 app.use('/', serve('./public'))
 
 exports.handler = serverless(app)
