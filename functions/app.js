@@ -67,4 +67,4 @@ app.use(history())
 app.use('/data', serve('./data'))
 app.use('/', serve('./public'))
 
-module.exports.handler = serverless(app)
+exports.handler = serverless(app)
