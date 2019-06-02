@@ -1,0 +1,46 @@
+{
+  "name": "qiita-api-play",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --watch",
+    "build": "npm run build:app & npm run build:functions",
+    "build:app": "cross-env NODE_ENV=production webpack",
+    "build:functions": "netlify-lambda build functions"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.4.5",
+    "@google-cloud/storage": "^2.5.0",
+    "@google-cloud/translate": "^4.0.1",
+    "babel-loader": "^8.0.6",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.1",
+    "material-design-icons-iconfont": "^5.0.1",
+    "netlify-lambda": "^1.4.13",
+    "nuxt": "^2.8.0",
+    "request": "^2.88.0",
+    "rimraf": "^2.6.3",
+    "serverless-http": "^2.0.2",
+    "vue-loader": "^15.7.0",
+    "vue-style-loader": "^4.1.2",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
+  },
+  "dependencies": {
+    "connect-history-api-fallback": "^1.6.0",
+    "express": "^4.17.1",
+    "is-chinese": "^1.2.9",
+    "request-promise-native": "^1.0.7",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.6",
+    "vuetify": "^1.5.14",
+    "vuex": "^3.1.1"
+  }
+}
