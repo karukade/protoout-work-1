@@ -24,9 +24,9 @@
       <v-expansion-panel v-if="relateTag.includes(item.id)" :style="{boxShadow: 'none'}">
         <v-expansion-panel-content>
           <template v-slot:header>
-            <div class="subheading blue--text">Tag</div>
+            <div @click="setId(item.id)" class="subheading blue--text">Tag</div>
           </template>
-          <relate-tags :language="item.id"/>
+          <relate-tags :load="itemIds.includes(item.id)" :language="item.id"/>
         </v-expansion-panel-content>
       </v-expansion-panel>
       <v-divider class="mt-3 mb-3"></v-divider>
@@ -44,7 +44,8 @@ export default {
   },
   data() {
     return {
-      relateTag: ['Python', 'JavaScript', 'Ruby', 'PHP', 'Rails', 'iOS']
+      relateTag: ['Python', 'JavaScript', 'Ruby', 'PHP', 'Rails', 'iOS'],
+      itemIds: []
     }
   },
   computed: {
@@ -55,6 +56,11 @@ export default {
       list: state => state.tag.lists,
       nextPage: state => state.tag.nextPage
     })
+  },
+  methods: {
+    setId(id) {
+      this.itemIds.push(id)
+    }
   }
 }
 </script>

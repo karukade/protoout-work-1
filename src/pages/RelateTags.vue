@@ -22,8 +22,10 @@ export default {
       isLoaded: false
     }
   },
-  mounted() {
-    this.read()
+  watch: {
+    load(value) {
+      if (value) this.read()
+    }
   },
   methods: {
     read() {
