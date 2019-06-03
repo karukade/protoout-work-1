@@ -33,8 +33,10 @@ export default {
   },
   methods: {
     read() {
+      this.isLoading = true
       fetch('./data/chinese-result.json').then(res => res.json()).then(data => {
         this.list = data
+        this.isLoading = false
       })
     }
   }

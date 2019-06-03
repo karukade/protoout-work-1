@@ -1,5 +1,11 @@
 <template>
   <v-list>
+    <v-progress-circular
+      v-if="isLoading"
+      :size="50"
+      color="primary"
+      indeterminate
+    ></v-progress-circular>
     <div v-for="(item, index) in list" :key="index">
       <v-list-tile class="grow">
         <v-list-tile-avatar>
@@ -42,6 +48,9 @@ export default {
     }
   },
   computed: {
+    isLoading() {
+       return this.list.length === 0
+    },
     ...mapState({
       list: state => state.tag.lists,
       nextPage: state => state.tag.nextPage
