@@ -24,7 +24,7 @@
       <v-expansion-panel v-if="relateTag.includes(item.id)" :style="{boxShadow: 'none'}">
         <v-expansion-panel-content>
           <template v-slot:header>
-            <div @click="setId(item.id)" class="subheading blue--text">Tag</div>
+            <div @click.once="setId(item.id)" class="subheading blue--text">Tag</div>
           </template>
           <relate-tags :load="itemIds.includes(item.id)" :language="item.id"/>
         </v-expansion-panel-content>
