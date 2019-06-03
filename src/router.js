@@ -5,7 +5,7 @@ Vue.use(Router)
 
 export function createRouter() {
   return new Router({
-    mode: 'history',
+    mode: 'hash',
     routes:[
       {path: '/', redirect: {name: 'tag'}},
       {path: '/tag', name: 'tag', component: () => import('./pages/Tag.vue')},
