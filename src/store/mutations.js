@@ -1,6 +1,7 @@
 import {
   UPDATE_LIST,
-  RESET_LIST
+  RESET_LIST,
+  UPDATE_CHINESE_LIST
 } from './mutation-type'
 
 export default {
@@ -11,5 +12,8 @@ export default {
   [RESET_LIST](state, {target}) {
     state[target].data = []
     state[target].nextPage = 1
+  },
+  [UPDATE_CHINESE_LIST](state, {list}) {
+    state.chinese = list
   }
 }

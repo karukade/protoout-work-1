@@ -1,6 +1,7 @@
 import {
   UPDATE_LIST,
-  RESET_LIST
+  RESET_LIST,
+  UPDATE_CHINESE_LIST
 } from './mutation-type'
 
 
@@ -14,6 +15,13 @@ async function getTag({commit, state}) {
   })
 }
 
+async function getChineseTag({commit}) {
+  fetch('./data/chinese-result.json').then(response => response.json()).then(list => {
+    commit(UPDATE_CHINESE_LIST, {list})
+  })
+}
+
 export default {
-  getTag
+  getTag,
+  getChineseTag
 }
