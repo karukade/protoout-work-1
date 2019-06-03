@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     read() {
-      fetch('http://localhost:3000/data/chinese-result.json').then(res => res.json()).then(data => {
+      fetch('./data/chinese-result.json').then(res => res.json()).then(data => {
         this.list = data
       })
     }

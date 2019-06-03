@@ -6,9 +6,8 @@
       app
     >
       <div>
-        <v-btn flat to="/tag">Tag</v-btn>
-        <v-btn flat to="/json">relate Tags</v-btn>
-        <v-btn flat to="/chinese">chinese</v-btn>
+        <v-btn flat to="/tag">1.投稿数で昇順に並べる / 2.投稿数上位タグと組あせて使われるタグを収集</v-btn>
+        <v-btn flat to="/chinese">3.中国語のタグ</v-btn>
       </div>
     </v-toolbar>
     <v-content>
