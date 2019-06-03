@@ -48,6 +48,7 @@ router.get('/', async (req, res) => {
   case 'tag':
     data = await getTags(page)
   }
+  res.set('Access-Control-Allow-Origin', 'https://5cf51e96e3811900092d97f9--distracted-khorana-1d850c.netlify.com')
   res.send(JSON.stringify(data))
 })
 
