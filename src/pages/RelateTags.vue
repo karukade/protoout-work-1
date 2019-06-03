@@ -28,7 +28,7 @@ export default {
   methods: {
     read() {
       this.isLoading = true
-      const jsonUrl = `http://localhost:3000/data/tagCounted-${this.language}.json`
+      const jsonUrl = `./data/tagCounted-${this.language}.json`
       fetch(jsonUrl).then(res => res.json()).then(data => {
         this.list = data
         this.isLoading = false

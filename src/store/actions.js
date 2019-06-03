@@ -4,7 +4,7 @@ import {
 } from './mutation-type'
 
 
-const endpoint = 'http://localhost:3000/api/'
+const endpoint = 'https://distracted-khorana-1d850c.netlify.com/.netlify/functions/app/api/'
 
 
 async function getTag({commit, state}) {
