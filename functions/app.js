@@ -55,6 +55,7 @@ router.get('/', async (req, res) => {
   case 'tag':
     data = await getTags(page)
   }
+  res.set('Access-Control-Allow-Origin', 'https://5cf524bd50bdaca3b43abf61--distracted-khorana-1d850c.netlify.com')
   res.send(JSON.stringify(data))
 })
 
@@ -64,6 +65,5 @@ const serve = path => express.static(resolve(path), {
 
 app.use('/.netlify/functions/app/api', router)
 app.use(history())
-app.use('/', serve('./public'))
 
 exports.handler = serverless(app)
