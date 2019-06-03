@@ -8,7 +8,7 @@
     ></v-progress-circular>
     <v-switch
       v-model="translate"
-      :label="`show translate`"
+      :label="`翻訳`"
     ></v-switch>
     <div v-if="list.length > 0" class="mt-5">
       <div v-for="(item, index) in list" :key="index" class="list">
