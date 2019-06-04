@@ -7,14 +7,14 @@
       indeterminate
     ></v-progress-circular>
     <v-list>
-      <v-container grid-list-md text-xs-center>
+      <v-container grid-list-md fluid text-xs-center>
         <v-layout row wrap　v-for="(item, index) in list" :key="index">
           <tag-list-item :item="item" :hasTag="relateTag.includes(item.id)" />
           <tag-list-item :item="folowersList[index]" :hasTag="false" />
         </v-layout>
       </v-container>
     </v-list>
-</div>
+  </div>
 </template>
 
 <script>
